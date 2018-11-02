@@ -1,0 +1,16 @@
+{
+  "name": "poulpmap",
+  "version": "1.0.1",
+  "description": "A interactive D3js map for creating stories compatible with the PoulpStudio project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jayffe/poulpmap.git"
+  }
+}
