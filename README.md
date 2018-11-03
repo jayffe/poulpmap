@@ -172,6 +172,12 @@ When a node is clicked on the map, this method is fired
 When a drag action from a pointer is finished on a node, this method is fired with the node hovered
 
 
+## License
+
+[MIT](https://opensource.org/licenses/MIT) © [Collectif Or Normes](http://accueil.collectifornormes.fr/)
+
+
+[⬆ back to top](#poulpmap)
 
 
 
