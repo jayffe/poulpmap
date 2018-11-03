@@ -1,11 +1,11 @@
 {
   "name": "poulpmap",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A interactive D3js map for creating stories compatible with the PoulpStudio project",
   "main": "./index.js",
   "scripts": {
     "build": "rimraf dist && babel src --out-dir dist",
-    "copy" : "cp -rf src/PoulpMap.css dist && cp -rf package.json dist",
+    "copy": "cp -rf src/PoulpMap.css dist && cp -rf package.json dist",
     "send": "npm version patch && npm run copy && cd dist && npm publish"
   },
   "keywords": [],
