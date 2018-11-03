@@ -2,14 +2,11 @@
   "name": "poulpmap",
   "version": "1.0.3",
   "description": "A interactive D3js map for creating stories compatible with the PoulpStudio project",
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "scripts": {
-    "build": "babel src --out-dir dist",
-    "prepublish": "npm run build"
+    "build": "rimraf dist && babel src --out-dir dist && cp -rf package.json dist",
+    "send": "cd dist && npm version patch && npm publish"
   },
-  "files": [
-    "dist"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,8 +15,10 @@
     "url": "https://github.com/jayffe/poulpmap.git"
   },
   "babel": {
+    "comments": false,
     "presets": [
-      "@babel/preset-env"
+      "@babel/preset-env",
+      "minify"
     ],
     "plugins": [
       "@babel/plugin-proposal-class-properties"
@@ -29,6 +28,8 @@
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/preset-env": "^7.1.0"
+    "@babel/preset-env": "^7.1.0",
+    "babel-preset-minify": "^0.5.0",
+    "rimraf": "^2.6.2"
   }
 }
