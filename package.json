@@ -7,6 +7,9 @@
     "build": "babel src --out-dir dist",
     "prepublish": "npm run build"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
