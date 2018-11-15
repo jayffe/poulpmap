@@ -16,7 +16,7 @@ export const screenHeight = window.innerHeight || document.documentElement.clien
 export const splitID = (id) => {
 
   const
-    contentID = id.split("||")[0],
+    contentID = id.split("$$")[0],
     sequenceID = id.split(".")[0],
     chapitreID = id.split("__")[0]
 
