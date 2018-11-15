@@ -47,7 +47,7 @@ export const chapitreStart = ()=>({start:true,...chapitre()})
 
 export const end = (id) => ({
   _type: TYPES.END,
-  id : `${id}||${randomID()}`
+  id : `${id}$$${randomID()}`
 })
 
 export const sequence = (chapitreID) => {
@@ -102,7 +102,7 @@ export const contentEnd = (sequenceID) => end(`${sequenceID}.${randomID()}`)
 
 export const contentChoice = (contentID) => ({
   _type: TYPES.CHOICE,
-  id: `${contentID}||${randomID()}`,
+  id: `${contentID}$$${randomID()}`,
   choice:""
 })
 
