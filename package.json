@@ -1,6 +1,6 @@
 {
   "name": "poulpmap",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "A interactive D3js map for creating stories compatible with the PoulpStudio project",
   "main": "./index.js",
   "scripts": {
