@@ -57,8 +57,8 @@ export default class PoulpMap {
     this.options = {...this.defaultOptions, ...options}
 
     this.startPos = {
-      x: (options.width || 650) * .3,
-      y: (options.height || 400) * .5
+      x: options.width * .3 || 200,
+      y: options.height * .5 || 200
     }
 
     svg = select(svg)
