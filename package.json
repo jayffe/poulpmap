@@ -4,7 +4,7 @@
   "description": "A interactive D3js map for creating stories compatible with the PoulpStudio project",
   "main": "./index.js",
   "scripts": {
-    "build": "rimraf dist && babel src --out-dir dist",
+    "build": "rimraf dist && babel src --source-maps --out-dir dist",
     "copy": "cp -rf src/PoulpMap.css dist && cp -rf package.json dist && cp -rf README.md dist",
     "send": "npm version patch && npm run copy && cd dist && npm publish"
   },
@@ -18,10 +18,16 @@
   "babel": {
     "comments": false,
     "presets": [
-      "@babel/preset-env"
+      "@babel/preset-env",
+      ["minify", {
+        "builtIns": false,
+        "evaluate": false,
+        "mangle": false
+      }]
     ],
     "plugins": [
-      "@babel/plugin-proposal-class-properties"
+      "@babel/plugin-proposal-class-properties",
+      "source-map-support"
     ]
   },
   "devDependencies": {
@@ -29,6 +35,7 @@
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
+    "babel-plugin-source-map-support": "^2.0.1",
     "babel-preset-minify": "^0.5.0",
     "rimraf": "^2.6.2"
   },
