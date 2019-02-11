@@ -92,7 +92,7 @@ function station() {
 
     merge: function (stationMerge) {
 
-      const rayon = (d) => r[d.pointers.length - 1] - 5
+      const rayon = (d) => Math.abs(r[d.pointers.length - 1] - 5)
 
       stationMerge.select(".backCircle").transition().attr("r", d => rayon(d))
 
