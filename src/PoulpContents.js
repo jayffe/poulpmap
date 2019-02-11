@@ -185,7 +185,7 @@ function pointer() {
 
 function contentSVG(c) {
 
-  const {sequenceHeight, sequenceWidth, sequenceColor, linkColor, linkSize} = this.options
+  const {sequenceHeight, sequenceWidth, sequenceColor, linkColor, sequenceLinkSize} = this.options
   const h = sequenceHeight, w = sequenceWidth;
 
   const content = c.append("g").attr("class", TYPES.CONTENT)
@@ -193,7 +193,7 @@ function contentSVG(c) {
   // Un petit cercle de style qui permet de lier de façon naturelle
   // aux links
   content.append("circle")
-    .attr("r", linkSize * .5)
+    .attr("r", sequenceLinkSize * .5)
     .attr("fill", linkColor)
 
   // Le fond de couleur qui relie tous les pointers
