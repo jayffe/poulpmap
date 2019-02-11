@@ -5,7 +5,7 @@
   "main": "./index.js",
   "scripts": {
     "build": "rimraf dist && babel src --source-maps --out-dir dist",
-    "copy": "cp -rf src/PoulpMap.css dist && cp -rf package.json dist && cp -rf README.md dist",
+    "copy": "cp -rf src/PoulpMap.css dist && cp -rf package.json dist && cp -r src dist && cp -rf README.md dist",
     "send": "npm version patch && npm run copy && cd dist && npm publish"
   },
   "keywords": [],
