@@ -1,6 +1,6 @@
 {
   "name": "poulpmap",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "A interactive D3js map for creating stories compatible with the PoulpStudio project",
   "main": "./index.js",
   "scripts": {
@@ -19,11 +19,14 @@
     "comments": false,
     "presets": [
       "@babel/preset-env",
-      ["minify", {
-        "builtIns": false,
-        "evaluate": false,
-        "mangle": false
-      }]
+      [
+        "minify",
+        {
+          "builtIns": false,
+          "evaluate": false,
+          "mangle": false
+        }
+      ]
     ],
     "plugins": [
       "@babel/plugin-proposal-class-properties"
