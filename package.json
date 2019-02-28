@@ -41,6 +41,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
+    "chance": "^1.0.18",
     "d3-array": "^1.2.4",
     "d3-drag": "^1.2.3",
     "d3-ease": "^1.0.5",
