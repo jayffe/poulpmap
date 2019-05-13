@@ -92,7 +92,7 @@ export const content = (sequenceID) => {
     _type: TYPES.CONTENT,
     id,
     name: "Content",
-    outputs: [contentChoice(id)],
+    choices: [contentChoice(id)],
   }
 }
 

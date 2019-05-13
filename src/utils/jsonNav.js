@@ -31,7 +31,7 @@ export const getSequence = (chapitres, id)=>{
 
 export const getContents = (chapitres, sid) => chapitres.find(ch => ch.id === splitID(sid).chapitreID).sequences.find(s => s.id === sid).contents
 
-export const getContentEnds = (d) => d.outputs || []
+export const getContentEnds = (d) => d.choices || []
 
 export const getContent = (chapitres, id) => {
 

@@ -26,7 +26,7 @@ export const addContent = (chapitres, endFromOrPosition, endTo) => {
     newContent._type = TYPES.EXIT
     newContent.end = endTo.id
     delete newContent.name
-    delete newContent.outputs
+    delete newContent.choices
   }
 
   return chapitres
@@ -34,10 +34,10 @@ export const addContent = (chapitres, endFromOrPosition, endTo) => {
 
 export const addContentOutput = (chapitres, content) => {
 
-  const ends = content.outputs
+  const ends = content.choices
 
   if (ends.length < 5) {
-    content.outputs.push(contentChoice(content.id))
+    content.choices.push(contentChoice(content.id))
   }
 
   return chapitres
@@ -49,9 +49,9 @@ export const removeContentOutput = (chapitres, pointer) => {
 
   const content = getContent(chapitres,splitID(id).contentID)
 
-  const index = content.outputs.findIndex(o => o.id === id)
+  const index = content.choices.findIndex(o => o.id === id)
 
-  content.outputs.splice(index, 1)
+  content.choices.splice(index, 1)
 
   return chapitres
 }

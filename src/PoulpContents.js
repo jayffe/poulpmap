@@ -304,7 +304,7 @@ function pointerMenu(pointer) {
     }
   ]
 
-  const contentEnds = pointer.station.data.node.outputs
+  const contentEnds = pointer.station.data.node.choices
 
   if (contentEnds.length > 1)
     menu.push(
