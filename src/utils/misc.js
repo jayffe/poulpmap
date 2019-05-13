@@ -63,6 +63,7 @@ export const placePointer = (station, childCount, i, r) => {
 
 export const troncateStationTitle = (str, size = 200) => {
 
+  if(!str) return ""
   const numberOfLetters = (size * .09) - 4
   return str.length >= numberOfLetters ? `${str.slice(0, numberOfLetters)}...` : str
 }
