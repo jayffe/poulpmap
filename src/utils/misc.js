@@ -4,7 +4,7 @@ import {chapitreStart} from "./nodeTypes"
 
 const chance = new Chance()
 
-export const randomID = () => chance.hash({length: 15})
+export const randomID = () => chance.letter() + chance.hash({length: 15})
 
 /**
  * Recuperation de largeur et hauteur de la fenetre
